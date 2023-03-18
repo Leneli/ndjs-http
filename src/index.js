@@ -13,8 +13,6 @@ const argv = yargs(hideBin(process.argv))
   .argv;
 const url = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${argv.c}`;
 
-console.log("🚀 ~ file: index.js:9 ~ argv:", argv)
-
 http
   .get(url, (res) => {
     const {statusCode, statusMessage} = res;
